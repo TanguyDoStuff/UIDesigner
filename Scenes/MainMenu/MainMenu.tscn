@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bww7cnpwne6rl"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu/MainMenu.gd" id="1_o0yiy"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_o0yiy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1110.0
+offset_top = 140.0
+offset_right = 1578.0
+offset_bottom = 266.0
+text = "UI / UX Project"
+
+[node name="LibreModeButton" type="Button" parent="."]
+offset_left = 782.0
+offset_top = 424.0
+offset_right = 1207.0
+offset_bottom = 563.0
+text = "Libre"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 860.0
+offset_top = 628.0
+offset_right = 1148.0
+offset_bottom = 740.0
+text = "Quitter le jeu"
+
+[connection signal="pressed" from="LibreModeButton" to="." method="_on_libre_mode_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

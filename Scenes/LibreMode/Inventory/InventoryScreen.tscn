@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhffqja5y63o5"]
+
+[ext_resource type="Script" path="res://Scenes/LibreMode/Inventory/InventoryScreen.gd" id="1_4qnyd"]
+[ext_resource type="Texture2D" uid="uid://5jxeqjfqbxty" path="res://Assets/LibreElement/Test.jpg" id="2_ydah7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tp1jd"]
+size = Vector2(182, 194)
+
+[node name="InventoryScreen" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_4qnyd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(927, 257)
+shape = SubResource("RectangleShape2D_tp1jd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+scale = Vector2(0.188, 0.188)
+texture = ExtResource("2_ydah7")
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 849.0
+offset_top = 37.0
+offset_right = 1012.0
+offset_bottom = 109.0
+text = "Retour"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1052.0
+offset_top = 163.0
+offset_right = 1396.0
+offset_bottom = 256.0
+text = "Ajoute:
+- Quand tu clique sur element, cache InventoryScreen
+- Duplique la pomme sur Libre, et rend la drag n drop"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

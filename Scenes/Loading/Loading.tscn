@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1sb8jgr8jtnu"]
+
+[ext_resource type="Script" path="res://Scenes/Loading/Loading.gd" id="1_hrykd"]
+
+[node name="Loading" type="Node2D"]
+script = ExtResource("1_hrykd")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 455.0
+offset_bottom = 40.0
+text = "Loading..."
