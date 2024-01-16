@@ -13,9 +13,14 @@ func followMouse():
 
 
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
+	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			mouse_offset = position - get_global_mouse_position()
 			selected = true
 		else:
 			selected = false
+
+
+func _on_area_2d_mouse_exited():
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
