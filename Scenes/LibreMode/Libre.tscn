@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsodh28vm4mj4"]
+[gd_scene load_steps=12 format=3 uid="uid://bsodh28vm4mj4"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/Libre.gd" id="1_8huxv"]
 [ext_resource type="Texture2D" uid="uid://3o6m7ejwa7yf" path="res://Assets/LibreBG/Test1.png" id="2_l8oe1"]
 [ext_resource type="Texture2D" uid="uid://ir5s86uy4g78" path="res://Assets/Icons/Inventory.png" id="3_3wwis"]
 [ext_resource type="PackedScene" uid="uid://dhffqja5y63o5" path="res://Scenes/LibreMode/Inventory/InventoryScreen.tscn" id="4_641me"]
+[ext_resource type="Texture2D" uid="uid://covdxoe568l4" path="res://Assets/Icons/Trash.png" id="4_n2rd3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kcsqx"]
 
@@ -18,6 +19,9 @@ Button/styles/disabled = SubResource("StyleBoxEmpty_kcsqx")
 Button/styles/focus = SubResource("StyleBoxEmpty_cnd1h")
 Button/styles/hover = SubResource("StyleBoxEmpty_4gx0l")
 Button/styles/normal = SubResource("StyleBoxEmpty_iddro")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl0bd"]
+size = Vector2(143, 143)
 
 [node name="Libre" type="Node2D"]
 script = ExtResource("1_8huxv")
@@ -46,6 +50,22 @@ scale = Vector2(0.146, 0.146)
 texture = ExtResource("3_3wwis")
 
 [node name="InventoryScreen" parent="." instance=ExtResource("4_641me")]
+visible = false
+
+[node name="TrashArea" type="Area2D" parent="."]
+
+[node name="TrashCollision" type="CollisionShape2D" parent="TrashArea"]
+position = Vector2(1778.5, 759.5)
+shape = SubResource("RectangleShape2D_bl0bd")
+
+[node name="Trash Icon" type="Sprite2D" parent="TrashArea/TrashCollision"]
+position = Vector2(0.5, 0.5)
+scale = Vector2(0.146, 0.146)
+texture = ExtResource("4_n2rd3")
 
 [connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
+[connection signal="mouse_entered" from="InventoryButton" to="." method="_on_inventory_button_mouse_entered"]
+[connection signal="mouse_exited" from="InventoryButton" to="." method="_on_inventory_button_mouse_exited"]
 [connection signal="pressed" from="InventoryButton" to="." method="_on_inventory_button_pressed"]
+[connection signal="mouse_entered" from="TrashArea" to="." method="_on_trash_area_mouse_entered"]
+[connection signal="mouse_exited" from="TrashArea" to="." method="_on_trash_area_mouse_exited"]

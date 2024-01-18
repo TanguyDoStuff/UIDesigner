@@ -1,11 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1sb8jgr8jtnu"]
+[gd_scene load_steps=3 format=3 uid="uid://d1sb8jgr8jtnu"]
 
 [ext_resource type="Script" path="res://Scenes/Loading/Loading.gd" id="1_hrykd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ww2ui"]
+font_size = 36
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Loading" type="Node2D"]
 script = ExtResource("1_hrykd")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 455.0
-offset_bottom = 40.0
-text = "Loading..."
+[node name="Label" type="Label" parent="."]
+offset_left = 1613.0
+offset_top = 982.0
+offset_right = 1874.0
+offset_bottom = 1041.0
+text = "Chargement..."
+label_settings = SubResource("LabelSettings_ww2ui")
