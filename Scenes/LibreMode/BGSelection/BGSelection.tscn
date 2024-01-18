@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4poeq7tjtxak"]
+
+[ext_resource type="Script" path="res://Scenes/LibreMode/BGSelection/BGSelection.gd" id="1_6x1h5"]
+[ext_resource type="Texture2D" uid="uid://3o6m7ejwa7yf" path="res://Assets/LibreBG/Test1.png" id="2_8a1as"]
+[ext_resource type="Texture2D" uid="uid://btrefwmsgopy2" path="res://Assets/LibreBG/Test2.png" id="3_21kml"]
+
+[node name="BgSelection" type="Node2D"]
+script = ExtResource("1_6x1h5")
+
+[node name="Backbutton" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 243.0
+offset_bottom = 89.0
+text = "Retour"
+
+[node name="BGTest1" type="Button" parent="."]
+offset_left = 403.0
+offset_top = 142.0
+offset_right = 852.0
+offset_bottom = 393.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BGTest1"]
+position = Vector2(226, 125)
+scale = Vector2(0.326797, 0.326797)
+texture = ExtResource("2_8a1as")
+
+[node name="BGTest2" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 147.0
+offset_right = 1527.0
+offset_bottom = 398.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BGTest2"]
+position = Vector2(226, 125)
+scale = Vector2(0.326797, 0.326797)
+texture = ExtResource("3_21kml")
+
+[connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
+[connection signal="pressed" from="BGTest1" to="." method="_on_bg_test_1_pressed"]
+[connection signal="pressed" from="BGTest2" to="." method="_on_bg_test_2_pressed"]

@@ -1,7 +1,8 @@
 extends Node2D
 
 func _ready():
-	$InventoryScreen.visible = false
+	$BackgroundImage.texture = load(Global.libreBackground) #Load the background
+	$InventoryScreen.visible = false #Hide the inventory screen
 
 func spawnElement(currentElement):
 	var instance = currentElement.instantiate()
@@ -10,7 +11,7 @@ func spawnElement(currentElement):
 	
 
 func _on_backbutton_pressed():
-	Global.loadingScene = "res://Scenes/MainMenu/MainMenu.tscn"
+	Global.loadingScene = "res://Scenes/LibreMode/BGSelection/BGSelection.tscn"
 	get_tree().change_scene_to_file("res://Scenes/Loading/Loading.tscn")
 
 func _on_inventory_button_pressed():
