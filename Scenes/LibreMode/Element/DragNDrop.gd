@@ -11,6 +11,10 @@ func _process(_delta):
 		free() #Remove itself
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW) #Change back to the arrow pointer
 		
+	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and selected == true:
+		selected = false
+		
+		
 func followMouse():
 	position = get_global_mouse_position() + mouse_offset
 
