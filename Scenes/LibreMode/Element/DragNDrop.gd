@@ -7,7 +7,7 @@ var mouse_offset = Vector2(0,0)
 func _process(_delta):
 	if selected:
 		followMouse()	
-	elif (position.x >= 1789 and position.x <= 1848) or (position.y >= 689 and position.y <= 826): #Trash position
+	elif (position.x >= 1700 and position.x <= 1858) and (position.y >= 700 and position.y <= 836): #Trash position
 		free() #Remove itself
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW) #Change back to the arrow pointer
 		
