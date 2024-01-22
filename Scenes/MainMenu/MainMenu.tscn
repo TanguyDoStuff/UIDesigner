@@ -1,16 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://bww7cnpwne6rl"]
+[gd_scene load_steps=4 format=3 uid="uid://bww7cnpwne6rl"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/MainMenu.gd" id="1_o0yiy"]
+[ext_resource type="Texture2D" uid="uid://rb11h3lsm4ya" path="res://Assets/paperbg.png" id="2_x48pc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gxgml"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_o0yiy")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 1110.0
-offset_top = 140.0
-offset_right = 1578.0
-offset_bottom = 266.0
-text = "UI / UX Project"
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(951, 559)
+scale = Vector2(1.18081, 1.18081)
+texture = ExtResource("2_x48pc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 357.0
+offset_right = 1911.0
+offset_bottom = 380.0
+text = "UI / UX PROJECT"
+label_settings = SubResource("LabelSettings_gxgml")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LibreModeButton" type="Button" parent="."]
 offset_left = 782.0
