@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://b68m63i1by8gl"]
+[gd_scene load_steps=4 format=3 uid="uid://b3k8gnwbwbk8d"]
 
-[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_ucfbm"]
-[ext_resource type="Texture2D" uid="uid://l8gcrrax717i" path="res://icon.svg" id="2_3adyi"]
+[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_b1tw6"]
+[ext_resource type="Texture2D" uid="uid://fq6tc6u2cqcx" path="res://Assets/LibreElement/heart.png" id="2_1is60"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdwp"]
-size = Vector2(106, 108)
+size = Vector2(54, 56)
 
 [node name="Test" type="Node2D"]
-script = ExtResource("1_ucfbm")
+script = ExtResource("1_b1tw6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.84375, 0.84375)
-texture = ExtResource("2_3adyi")
+scale = Vector2(0.415385, 0.415385)
+texture = ExtResource("2_1is60")
 
 [node name="Area2D" type="Area2D" parent="."]
 

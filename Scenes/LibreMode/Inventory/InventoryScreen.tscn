@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhffqja5y63o5"]
+[gd_scene load_steps=6 format=3 uid="uid://dhffqja5y63o5"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/Inventory/InventoryScreen.gd" id="1_4qnyd"]
-[ext_resource type="Texture2D" uid="uid://5jxeqjfqbxty" path="res://Assets/LibreElement/Test.jpg" id="2_ydah7"]
-[ext_resource type="Texture2D" uid="uid://l8gcrrax717i" path="res://icon.svg" id="3_2o54y"]
+[ext_resource type="Texture2D" uid="uid://coyaoe1nlde6j" path="res://Assets/LibreElement/rank.png" id="3_tqdio"]
+[ext_resource type="Texture2D" uid="uid://x6j60mo1tl8p" path="res://Assets/LibreElement/itemkart.png" id="4_kq682"]
+[ext_resource type="Texture2D" uid="uid://fq6tc6u2cqcx" path="res://Assets/LibreElement/heart.png" id="4_u0rr2"]
+[ext_resource type="Texture2D" uid="uid://b3hod0rh31ssc" path="res://Assets/LibreElement/povpickaxe.png" id="5_3clop"]
 
 [node name="InventoryScreen" type="Node2D"]
 process_mode = 3
@@ -23,28 +25,52 @@ offset_right = 1012.0
 offset_bottom = 109.0
 text = "Retour"
 
-[node name="TestButton" type="Button" parent="."]
-offset_left = 665.0
-offset_top = 159.0
-offset_right = 805.0
-offset_bottom = 299.0
+[node name="heartButton" type="Button" parent="."]
+offset_left = 587.0
+offset_top = 201.0
+offset_right = 727.0
+offset_bottom = 341.0
 
-[node name="Sprite2D" type="Sprite2D" parent="TestButton"]
+[node name="Sprite2D" type="Sprite2D" parent="heartButton"]
 position = Vector2(70, 68)
-scale = Vector2(0.138, 0.138)
-texture = ExtResource("2_ydah7")
+scale = Vector2(0.892307, 0.892307)
+texture = ExtResource("4_u0rr2")
 
-[node name="TestButton2" type="Button" parent="."]
-offset_left = 967.0
-offset_top = 158.0
-offset_right = 1107.0
-offset_bottom = 298.0
+[node name="rankButton" type="Button" parent="."]
+offset_left = 807.0
+offset_top = 202.0
+offset_right = 947.0
+offset_bottom = 342.0
 
-[node name="Sprite2D" type="Sprite2D" parent="TestButton2"]
+[node name="Sprite2D" type="Sprite2D" parent="rankButton"]
 position = Vector2(70, 68)
-scale = Vector2(1.04688, 1.04688)
-texture = ExtResource("3_2o54y")
+scale = Vector2(0.315789, 0.315789)
+texture = ExtResource("3_tqdio")
+
+[node name="itemkartButton" type="Button" parent="."]
+offset_left = 1051.0
+offset_top = 199.0
+offset_right = 1191.0
+offset_bottom = 339.0
+
+[node name="Sprite2D" type="Sprite2D" parent="itemkartButton"]
+position = Vector2(70, 68)
+scale = Vector2(0.284289, 0.284289)
+texture = ExtResource("4_kq682")
+
+[node name="povpickaxeButton" type="Button" parent="."]
+offset_left = 587.0
+offset_top = 387.0
+offset_right = 727.0
+offset_bottom = 527.0
+
+[node name="Sprite2D" type="Sprite2D" parent="povpickaxeButton"]
+position = Vector2(70, 68)
+scale = Vector2(0.196147, 0.196147)
+texture = ExtResource("5_3clop")
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="TestButton" to="." method="_on_test_button_pressed"]
-[connection signal="pressed" from="TestButton2" to="." method="_on_test_button_2_pressed"]
+[connection signal="pressed" from="heartButton" to="." method="_on_heart_button_pressed"]
+[connection signal="pressed" from="rankButton" to="." method="_on_rank_button_pressed"]
+[connection signal="pressed" from="itemkartButton" to="." method="_on_itemkart_button_pressed"]
+[connection signal="pressed" from="povpickaxeButton" to="." method="_on_povpickaxe_button_pressed"]

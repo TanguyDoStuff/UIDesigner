@@ -5,14 +5,24 @@ func hideInventory():
 	visible = false
 
 
-
 func _on_back_button_pressed():
 	hideInventory()
 
-func _on_test_button_pressed():
+func _on_heart_button_pressed():
 	hideInventory()
-	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/Test2.tscn"))
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/heart.tscn"))
 
-func _on_test_button_2_pressed():
+
+func _on_rank_button_pressed():
 	hideInventory()
-	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/Test.tscn"))
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/rank.tscn"))
+
+
+func _on_itemkart_button_pressed():
+	hideInventory()
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/itemkart.tscn"))
+
+
+func _on_povpickaxe_button_pressed():
+	hideInventory()
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/povpickaxe.tscn"))
