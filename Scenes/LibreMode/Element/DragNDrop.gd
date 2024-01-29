@@ -8,7 +8,7 @@ func _process(_delta):
 	if selected:
 		followMouse()	
 	elif (position.x >= 1700 and position.x <= 1858) and (position.y >= 700 and position.y <= 836): #Trash position
-		free() #Remove itself
+		queue_free() #Remove itself
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW) #Change back to the arrow pointer
 		
 	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and selected == true:

@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://15vbjioyoac"]
+[gd_scene load_steps=4 format=3 uid="uid://by6h0iv85fex"]
 
-[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_v8fq8"]
-[ext_resource type="Texture2D" uid="uid://b3hod0rh31ssc" path="res://Assets/LibreElement/povpickaxe.png" id="2_wmyuu"]
+[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_5grrw"]
+[ext_resource type="Texture2D" uid="uid://c5w6hw8ffx8dm" path="res://Assets/LibreElement/healthbar.png" id="2_eydko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyk63"]
-size = Vector2(252, 286)
+size = Vector2(410, 70)
 
 [node name="Test" type="Node2D"]
-script = ExtResource("1_v8fq8")
+script = ExtResource("1_5grrw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.437828, 0.437828)
-texture = ExtResource("2_wmyuu")
+scale = Vector2(0.512397, 0.512397)
+texture = ExtResource("2_eydko")
 
 [node name="Area2D" type="Area2D" parent="."]
 

@@ -1,10 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhffqja5y63o5"]
+[gd_scene load_steps=23 format=3 uid="uid://dhffqja5y63o5"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/Inventory/InventoryScreen.gd" id="1_4qnyd"]
 [ext_resource type="Texture2D" uid="uid://coyaoe1nlde6j" path="res://Assets/LibreElement/rank.png" id="3_tqdio"]
+[ext_resource type="Texture2D" uid="uid://c5w6hw8ffx8dm" path="res://Assets/LibreElement/healthbar.png" id="3_vbheq"]
 [ext_resource type="Texture2D" uid="uid://x6j60mo1tl8p" path="res://Assets/LibreElement/itemkart.png" id="4_kq682"]
 [ext_resource type="Texture2D" uid="uid://fq6tc6u2cqcx" path="res://Assets/LibreElement/heart.png" id="4_u0rr2"]
 [ext_resource type="Texture2D" uid="uid://b3hod0rh31ssc" path="res://Assets/LibreElement/povpickaxe.png" id="5_3clop"]
+[ext_resource type="Texture2D" uid="uid://ca42axx70vtax" path="res://Assets/LibreElement/povgun.png" id="6_as61s"]
+[ext_resource type="Texture2D" uid="uid://cj6iteqqqvst6" path="res://Assets/LibreElement/crosshair.png" id="7_2ljeu"]
+[ext_resource type="Texture2D" uid="uid://b3vmhsedw3e8r" path="res://Assets/LibreElement/inventorybar.png" id="8_gmgb2"]
+[ext_resource type="Texture2D" uid="uid://d34xx56huwxid" path="res://Assets/LibreElement/mapsquare.png" id="9_i1erp"]
+[ext_resource type="Texture2D" uid="uid://cxj783mhjabgg" path="res://Assets/LibreElement/mapkart.png" id="10_rofc4"]
+[ext_resource type="Texture2D" uid="uid://d3jh13nuhst73" path="res://Assets/LibreElement/lapcount.png" id="12_kyjny"]
+[ext_resource type="Texture2D" uid="uid://mj6imd3hrnqu" path="res://Assets/LibreElement/scorenumber.png" id="13_synnf"]
+[ext_resource type="Texture2D" uid="uid://343vffvgfnqf" path="res://Assets/LibreElement/scorestar.png" id="14_hku8m"]
+[ext_resource type="Texture2D" uid="uid://dfqw3pd5834s8" path="res://Assets/LibreElement/staminabar.png" id="15_yg31r"]
+[ext_resource type="Texture2D" uid="uid://rfn7ufir4vq5" path="res://Assets/LibreElement/timer.png" id="16_swow7"]
+[ext_resource type="Texture2D" uid="uid://cor38xf31xu0q" path="res://Assets/LibreElement/abutton.png" id="17_7e853"]
+[ext_resource type="Texture2D" uid="uid://cagkyi11qro4s" path="res://Assets/LibreElement/bbutton.png" id="18_c5w1j"]
+[ext_resource type="Texture2D" uid="uid://rl7jgkj6auba" path="res://Assets/LibreElement/ybutton.png" id="19_dwqyp"]
+[ext_resource type="Texture2D" uid="uid://cf4k1y71ux2sj" path="res://Assets/LibreElement/xbutton.png" id="20_cv53v"]
+[ext_resource type="Texture2D" uid="uid://dld04680gdtcv" path="res://Assets/LibreElement/coincount.png" id="21_i2o6e"]
+[ext_resource type="Texture2D" uid="uid://d2autfs1m0pgq" path="res://Assets/LibreElement/compass.png" id="22_pq0ln"]
 
 [node name="InventoryScreen" type="Node2D"]
 process_mode = 3
@@ -24,6 +41,17 @@ offset_top = 37.0
 offset_right = 1012.0
 offset_bottom = 109.0
 text = "Retour"
+
+[node name="healthbarButton" type="Button" parent="."]
+offset_left = 393.0
+offset_top = 201.0
+offset_right = 533.0
+offset_bottom = 341.0
+
+[node name="Sprite2D" type="Sprite2D" parent="healthbarButton"]
+position = Vector2(70, 68)
+scale = Vector2(0.153846, 0.153846)
+texture = ExtResource("3_vbheq")
 
 [node name="heartButton" type="Button" parent="."]
 offset_left = 587.0
@@ -69,8 +97,212 @@ position = Vector2(70, 68)
 scale = Vector2(0.196147, 0.196147)
 texture = ExtResource("5_3clop")
 
+[node name="povgunButton" type="Button" parent="."]
+offset_left = 806.0
+offset_top = 388.0
+offset_right = 946.0
+offset_bottom = 528.0
+
+[node name="Sprite2D" type="Sprite2D" parent="povgunButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.155592, 0.155592)
+texture = ExtResource("6_as61s")
+
+[node name="crosshairButton" type="Button" parent="."]
+offset_left = 1051.0
+offset_top = 390.0
+offset_right = 1191.0
+offset_bottom = 530.0
+
+[node name="Sprite2D" type="Sprite2D" parent="crosshairButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.703911, 0.703911)
+texture = ExtResource("7_2ljeu")
+
+[node name="inventorybarButton" type="Button" parent="."]
+offset_left = 583.0
+offset_top = 587.0
+offset_right = 723.0
+offset_bottom = 727.0
+
+[node name="Sprite2D" type="Sprite2D" parent="inventorybarButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.0909091, 0.0909091)
+texture = ExtResource("8_gmgb2")
+
+[node name="mapsquareButton" type="Button" parent="."]
+offset_left = 809.0
+offset_top = 587.0
+offset_right = 949.0
+offset_bottom = 727.0
+
+[node name="Sprite2D" type="Sprite2D" parent="mapsquareButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.17991, 0.17991)
+texture = ExtResource("9_i1erp")
+
+[node name="mapkartButton" type="Button" parent="."]
+offset_left = 1050.0
+offset_top = 587.0
+offset_right = 1190.0
+offset_bottom = 727.0
+
+[node name="Sprite2D" type="Sprite2D" parent="mapkartButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.219554, 0.219554)
+texture = ExtResource("10_rofc4")
+
+[node name="lapcountButton" type="Button" parent="."]
+offset_left = 390.0
+offset_top = 385.0
+offset_right = 530.0
+offset_bottom = 525.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="lapcountButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.118852, 0.118852)
+texture = ExtResource("12_kyjny")
+
+[node name="scorenumberButton" type="Button" parent="."]
+offset_left = 390.0
+offset_top = 589.0
+offset_right = 530.0
+offset_bottom = 729.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="scorenumberButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.259257, 0.259257)
+texture = ExtResource("13_synnf")
+
+[node name="scorestarButton" type="Button" parent="."]
+offset_left = 1253.0
+offset_top = 589.0
+offset_right = 1393.0
+offset_bottom = 729.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="scorestarButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.155625, 0.155624)
+texture = ExtResource("14_hku8m")
+
+[node name="staminabarButton" type="Button" parent="."]
+offset_left = 1253.0
+offset_top = 389.0
+offset_right = 1393.0
+offset_bottom = 529.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="staminabarButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.192994, 0.192994)
+texture = ExtResource("15_yg31r")
+
+[node name="timerButton" type="Button" parent="."]
+offset_left = 1253.0
+offset_top = 199.0
+offset_right = 1393.0
+offset_bottom = 339.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="timerButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.137586, 0.137586)
+texture = ExtResource("16_swow7")
+
+[node name="aButton" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 783.0
+offset_right = 641.0
+offset_bottom = 923.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="aButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.528199, 0.528198)
+texture = ExtResource("17_7e853")
+
+[node name="bButton" type="Button" parent="."]
+offset_left = 701.0
+offset_top = 783.0
+offset_right = 841.0
+offset_bottom = 923.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="bButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.383025, 0.383024)
+texture = ExtResource("18_c5w1j")
+
+[node name="yButton" type="Button" parent="."]
+offset_left = 924.0
+offset_top = 783.0
+offset_right = 1064.0
+offset_bottom = 923.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="yButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.421132, 0.421131)
+texture = ExtResource("19_dwqyp")
+
+[node name="xButton" type="Button" parent="."]
+offset_left = 1155.0
+offset_top = 783.0
+offset_right = 1295.0
+offset_bottom = 923.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="xButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.480916, 0.480916)
+texture = ExtResource("20_cv53v")
+
+[node name="coincountButton" type="Button" parent="."]
+offset_left = 1480.0
+offset_top = 197.0
+offset_right = 1620.0
+offset_bottom = 337.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="coincountButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.285947, 0.285947)
+texture = ExtResource("21_i2o6e")
+
+[node name="compassButton" type="Button" parent="."]
+offset_left = 1480.0
+offset_top = 385.0
+offset_right = 1620.0
+offset_bottom = 525.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="compassButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.0691213, 0.0691212)
+texture = ExtResource("22_pq0ln")
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="healthbarButton" to="." method="_on_healthbar_button_pressed"]
 [connection signal="pressed" from="heartButton" to="." method="_on_heart_button_pressed"]
 [connection signal="pressed" from="rankButton" to="." method="_on_rank_button_pressed"]
 [connection signal="pressed" from="itemkartButton" to="." method="_on_itemkart_button_pressed"]
 [connection signal="pressed" from="povpickaxeButton" to="." method="_on_povpickaxe_button_pressed"]
+[connection signal="pressed" from="povgunButton" to="." method="_on_povgun_button_pressed"]
+[connection signal="pressed" from="crosshairButton" to="." method="_on_crosshair_button_pressed"]
+[connection signal="pressed" from="inventorybarButton" to="." method="_on_inventorybar_button_pressed"]
+[connection signal="pressed" from="mapsquareButton" to="." method="_on_mapsquare_button_pressed"]
+[connection signal="pressed" from="mapkartButton" to="." method="_on_mapkart_button_pressed"]
+[connection signal="pressed" from="lapcountButton" to="." method="_on_lapcount_button_pressed"]
+[connection signal="pressed" from="scorenumberButton" to="." method="_on_scorenumber_button_pressed"]
+[connection signal="pressed" from="scorestarButton" to="." method="_on_scorestar_button_pressed"]
+[connection signal="pressed" from="staminabarButton" to="." method="_on_staminabar_button_pressed"]
+[connection signal="pressed" from="timerButton" to="." method="_on_timer_button_pressed"]
+[connection signal="pressed" from="aButton" to="." method="_on_a_button_pressed"]
+[connection signal="pressed" from="bButton" to="." method="_on_b_button_pressed"]
+[connection signal="pressed" from="yButton" to="." method="_on_y_button_pressed"]
+[connection signal="pressed" from="xButton" to="." method="_on_x_button_pressed"]
+[connection signal="pressed" from="coincountButton" to="." method="_on_coincount_button_pressed"]
+[connection signal="pressed" from="compassButton" to="." method="_on_compass_button_pressed"]

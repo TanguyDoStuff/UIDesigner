@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://h7ucqk8525he"]
+
+[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_xygm4"]
+[ext_resource type="Texture2D" uid="uid://cxj783mhjabgg" path="res://Assets/LibreElement/mapkart.png" id="2_vsntb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwcsi"]
+size = Vector2(150, 144)
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_xygm4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.249377, 0.249377)
+texture = ExtResource("2_vsntb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_lwcsi")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

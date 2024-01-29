@@ -29,7 +29,7 @@ offset_left = 782.0
 offset_top = 424.0
 offset_right = 1207.0
 offset_bottom = 563.0
-text = "Libre"
+text = "Commencer"
 
 [node name="QuitButton" type="Button" parent="."]
 offset_left = 860.0

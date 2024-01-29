@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1s8re1b5g203"]
+
+[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_kv0ie"]
+[ext_resource type="Texture2D" uid="uid://mj6imd3hrnqu" path="res://Assets/LibreElement/scorenumber.png" id="2_wnal7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdwp"]
+size = Vector2(152.903, 95.3243)
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_kv0ie")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.315113, 0.315113)
+texture = ExtResource("2_wnal7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.994092, 1.00709)
+shape = SubResource("RectangleShape2D_hqdwp")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
