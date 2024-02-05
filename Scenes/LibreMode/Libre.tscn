@@ -1,36 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://bsodh28vm4mj4"]
+[gd_scene load_steps=10 format=3 uid="uid://bsodh28vm4mj4"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/Libre.gd" id="1_8huxv"]
-[ext_resource type="Texture2D" uid="uid://rb11h3lsm4ya" path="res://Assets/paperbg.png" id="2_fh7ly"]
 [ext_resource type="Texture2D" uid="uid://ir5s86uy4g78" path="res://Assets/Icons/Inventory.png" id="3_3wwis"]
 [ext_resource type="Texture2D" uid="uid://d2w5mh2id3hkn" path="res://Assets/LibreBG/kart.png" id="3_npcw4"]
+[ext_resource type="Theme" uid="uid://cgvukp6032r6t" path="res://Assets/theme/theme.tres" id="4_012ej"]
 [ext_resource type="PackedScene" uid="uid://dhffqja5y63o5" path="res://Scenes/LibreMode/Inventory/InventoryScreen.tscn" id="4_641me"]
+[ext_resource type="Theme" uid="uid://de3o0d2ybfxu8" path="res://Assets/theme/invisibleButton.tres" id="4_jf8qe"]
 [ext_resource type="Texture2D" uid="uid://covdxoe568l4" path="res://Assets/Icons/Trash.png" id="4_n2rd3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kcsqx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnd1h"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4gx0l"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iddro"]
-
-[sub_resource type="Theme" id="Theme_dxboc"]
-Button/styles/disabled = SubResource("StyleBoxEmpty_kcsqx")
-Button/styles/focus = SubResource("StyleBoxEmpty_cnd1h")
-Button/styles/hover = SubResource("StyleBoxEmpty_4gx0l")
-Button/styles/normal = SubResource("StyleBoxEmpty_iddro")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl0bd"]
-size = Vector2(143, 143)
+[ext_resource type="Texture2D" uid="uid://bk1n4d6lifynp" path="res://Assets/misc/transition.svg" id="8_k7o8c"]
+[ext_resource type="Script" path="res://Assets/Transition.gd" id="9_xwyvj"]
 
 [node name="Libre" type="Node2D"]
 script = ExtResource("1_8huxv")
-
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(951, 559)
-scale = Vector2(1.18081, 1.18081)
-texture = ExtResource("2_fh7ly")
 
 [node name="Border" type="ColorRect" parent="."]
 process_mode = 4
@@ -47,10 +28,12 @@ scale = Vector2(0.703704, 0.703704)
 texture = ExtResource("3_npcw4")
 
 [node name="Backbutton" type="Button" parent="."]
+z_index = 1
 offset_left = 36.0
 offset_top = 22.0
 offset_right = 243.0
 offset_bottom = 89.0
+theme = ExtResource("4_012ej")
 text = "Retour"
 metadata/_edit_use_anchors_ = true
 
@@ -60,7 +43,7 @@ offset_left = 1706.0
 offset_top = 865.0
 offset_right = 1850.0
 offset_bottom = 1009.0
-theme = SubResource("Theme_dxboc")
+theme = ExtResource("4_jf8qe")
 metadata/_edit_use_anchors_ = true
 
 [node name="Inventory Icon" type="Sprite2D" parent="InventoryButton"]
@@ -71,20 +54,19 @@ texture = ExtResource("3_3wwis")
 [node name="InventoryScreen" parent="." instance=ExtResource("4_641me")]
 visible = false
 
-[node name="TrashArea" type="Area2D" parent="."]
-
-[node name="TrashCollision" type="CollisionShape2D" parent="TrashArea"]
-position = Vector2(1778.5, 759.5)
-shape = SubResource("RectangleShape2D_bl0bd")
-
-[node name="Trash Icon" type="Sprite2D" parent="TrashArea/TrashCollision"]
-position = Vector2(0.5, 0.5)
+[node name="Trash Icon" type="Sprite2D" parent="."]
+position = Vector2(1779, 760)
 scale = Vector2(0.146, 0.146)
 texture = ExtResource("4_n2rd3")
+
+[node name="Transition" type="Sprite2D" parent="."]
+z_index = 1000
+position = Vector2(960, -1118)
+scale = Vector2(1.04633, 1.04633)
+texture = ExtResource("8_k7o8c")
+script = ExtResource("9_xwyvj")
 
 [connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
 [connection signal="mouse_entered" from="InventoryButton" to="." method="_on_inventory_button_mouse_entered"]
 [connection signal="mouse_exited" from="InventoryButton" to="." method="_on_inventory_button_mouse_exited"]
 [connection signal="pressed" from="InventoryButton" to="." method="_on_inventory_button_pressed"]
-[connection signal="mouse_entered" from="TrashArea" to="." method="_on_trash_area_mouse_entered"]
-[connection signal="mouse_exited" from="TrashArea" to="." method="_on_trash_area_mouse_exited"]

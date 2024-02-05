@@ -1,6 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://dhffqja5y63o5"]
+[gd_scene load_steps=30 format=3 uid="uid://dhffqja5y63o5"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/Inventory/InventoryScreen.gd" id="1_4qnyd"]
+[ext_resource type="Theme" uid="uid://cgvukp6032r6t" path="res://Assets/theme/theme.tres" id="2_6uc40"]
+[ext_resource type="Theme" uid="uid://d0iklti56tk3l" path="res://Assets/theme/borderButton.tres" id="3_bnsdj"]
 [ext_resource type="Texture2D" uid="uid://coyaoe1nlde6j" path="res://Assets/LibreElement/rank.png" id="3_tqdio"]
 [ext_resource type="Texture2D" uid="uid://c5w6hw8ffx8dm" path="res://Assets/LibreElement/healthbar.png" id="3_vbheq"]
 [ext_resource type="Texture2D" uid="uid://x6j60mo1tl8p" path="res://Assets/LibreElement/itemkart.png" id="4_kq682"]
@@ -45,6 +47,7 @@ offset_left = 849.0
 offset_top = 37.0
 offset_right = 1012.0
 offset_bottom = 109.0
+theme = ExtResource("2_6uc40")
 text = "Retour"
 
 [node name="healthbarButton" type="Button" parent="."]
@@ -52,6 +55,7 @@ offset_left = 393.0
 offset_top = 201.0
 offset_right = 533.0
 offset_bottom = 341.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="healthbarButton"]
 position = Vector2(70, 68)
@@ -63,6 +67,7 @@ offset_left = 587.0
 offset_top = 201.0
 offset_right = 727.0
 offset_bottom = 341.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="heartButton"]
 position = Vector2(70, 68)
@@ -74,6 +79,7 @@ offset_left = 807.0
 offset_top = 202.0
 offset_right = 947.0
 offset_bottom = 342.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="rankButton"]
 position = Vector2(70, 68)
@@ -85,6 +91,7 @@ offset_left = 1051.0
 offset_top = 199.0
 offset_right = 1191.0
 offset_bottom = 339.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="itemkartButton"]
 position = Vector2(70, 68)
@@ -96,6 +103,7 @@ offset_left = 587.0
 offset_top = 387.0
 offset_right = 727.0
 offset_bottom = 527.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="povpickaxeButton"]
 position = Vector2(70, 68)
@@ -107,6 +115,7 @@ offset_left = 806.0
 offset_top = 388.0
 offset_right = 946.0
 offset_bottom = 528.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="povgunButton"]
 position = Vector2(72, 70)
@@ -118,6 +127,7 @@ offset_left = 1051.0
 offset_top = 390.0
 offset_right = 1191.0
 offset_bottom = 530.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="crosshairButton"]
 position = Vector2(72, 70)
@@ -129,6 +139,7 @@ offset_left = 583.0
 offset_top = 587.0
 offset_right = 723.0
 offset_bottom = 727.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="inventorybarButton"]
 position = Vector2(72, 70)
@@ -140,6 +151,7 @@ offset_left = 809.0
 offset_top = 587.0
 offset_right = 949.0
 offset_bottom = 727.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="mapsquareButton"]
 position = Vector2(72, 70)
@@ -151,6 +163,7 @@ offset_left = 1050.0
 offset_top = 587.0
 offset_right = 1190.0
 offset_bottom = 727.0
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="mapkartButton"]
 position = Vector2(72, 70)
@@ -163,6 +176,7 @@ offset_top = 385.0
 offset_right = 530.0
 offset_bottom = 525.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="lapcountButton"]
 position = Vector2(72, 70)
@@ -175,6 +189,7 @@ offset_top = 589.0
 offset_right = 530.0
 offset_bottom = 729.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="scorenumberButton"]
 position = Vector2(72, 70)
@@ -187,6 +202,7 @@ offset_top = 589.0
 offset_right = 331.0
 offset_bottom = 729.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="dialoguenameButton"]
 position = Vector2(72, 70)
@@ -199,6 +215,7 @@ offset_top = 383.0
 offset_right = 331.0
 offset_bottom = 523.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="dialoguesquareButton"]
 position = Vector2(72, 70)
@@ -211,6 +228,7 @@ offset_top = 589.0
 offset_right = 1393.0
 offset_bottom = 729.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="scorestarButton"]
 position = Vector2(72, 70)
@@ -223,6 +241,7 @@ offset_top = 389.0
 offset_right = 1393.0
 offset_bottom = 529.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="staminabarButton"]
 position = Vector2(72, 70)
@@ -235,6 +254,7 @@ offset_top = 199.0
 offset_right = 1393.0
 offset_bottom = 339.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="timerButton"]
 position = Vector2(72, 70)
@@ -247,6 +267,7 @@ offset_top = 783.0
 offset_right = 641.0
 offset_bottom = 923.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="aButton"]
 position = Vector2(72, 70)
@@ -259,6 +280,7 @@ offset_top = 783.0
 offset_right = 841.0
 offset_bottom = 923.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="bButton"]
 position = Vector2(72, 70)
@@ -271,6 +293,7 @@ offset_top = 783.0
 offset_right = 1064.0
 offset_bottom = 923.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="yButton"]
 position = Vector2(72, 70)
@@ -283,6 +306,7 @@ offset_top = 783.0
 offset_right = 1295.0
 offset_bottom = 923.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="xButton"]
 position = Vector2(72, 70)
@@ -295,6 +319,7 @@ offset_top = 197.0
 offset_right = 1620.0
 offset_bottom = 337.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="coincountButton"]
 position = Vector2(72, 70)
@@ -307,6 +332,7 @@ offset_top = 385.0
 offset_right = 1620.0
 offset_bottom = 525.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="compassButton"]
 position = Vector2(72, 70)
@@ -319,6 +345,7 @@ offset_top = 592.0
 offset_right = 1620.0
 offset_bottom = 732.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="portrait1Button"]
 position = Vector2(72, 70)
@@ -331,6 +358,7 @@ offset_top = 592.0
 offset_right = 1810.0
 offset_bottom = 732.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="portrait2Button"]
 position = Vector2(72, 70)
@@ -343,6 +371,7 @@ offset_top = 387.0
 offset_right = 1810.0
 offset_bottom = 527.0
 scale = Vector2(1, 0.997149)
+theme = ExtResource("3_bnsdj")
 
 [node name="Sprite2D" type="Sprite2D" parent="puzzlenextButton"]
 position = Vector2(72, 70)

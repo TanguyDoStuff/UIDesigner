@@ -1,25 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1sb8jgr8jtnu"]
+[gd_scene load_steps=3 format=3 uid="uid://d1sb8jgr8jtnu"]
 
 [ext_resource type="Script" path="res://Scenes/Loading/Loading.gd" id="1_hrykd"]
-[ext_resource type="Texture2D" uid="uid://rb11h3lsm4ya" path="res://Assets/paperbg.png" id="2_x6ydw"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ww2ui"]
-font_size = 36
-outline_size = 16
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="Theme" uid="uid://cgvukp6032r6t" path="res://Assets/theme/theme.tres" id="2_2c65h"]
 
 [node name="Loading" type="Node2D"]
 script = ExtResource("1_hrykd")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(951, 559)
-scale = Vector2(1.18081, 1.18081)
-texture = ExtResource("2_x6ydw")
-
 [node name="Label" type="Label" parent="."]
-offset_left = 1613.0
-offset_top = 982.0
-offset_right = 1874.0
-offset_bottom = 1041.0
+offset_left = 1540.0
+offset_top = 990.0
+offset_right = 1897.0
+offset_bottom = 1060.0
+theme = ExtResource("2_2c65h")
 text = "Chargement..."
-label_settings = SubResource("LabelSettings_ww2ui")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)

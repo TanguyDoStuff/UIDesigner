@@ -1,42 +1,68 @@
-[gd_scene load_steps=4 format=3 uid="uid://bww7cnpwne6rl"]
+[gd_scene load_steps=9 format=3 uid="uid://bww7cnpwne6rl"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/MainMenu.gd" id="1_o0yiy"]
-[ext_resource type="Texture2D" uid="uid://rb11h3lsm4ya" path="res://Assets/paperbg.png" id="2_x48pc"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_gxgml"]
-font_color = Color(0, 0, 0, 1)
+[ext_resource type="Theme" uid="uid://cgvukp6032r6t" path="res://Assets/theme/theme.tres" id="3_7kfqm"]
+[ext_resource type="Texture2D" uid="uid://c4nrucxwtpadh" path="res://Assets/logo.svg" id="4_ii43l"]
+[ext_resource type="Texture2D" uid="uid://bhvb2vlaeo6sx" path="res://Assets/mainmenu/hill.png" id="4_t2ksp"]
+[ext_resource type="Texture2D" uid="uid://dplsy6dvnytnm" path="res://Assets/mainmenu/Character.png" id="5_y3ac1"]
+[ext_resource type="Texture2D" uid="uid://p4isirdy1g8u" path="res://Assets/mainmenu/Fish.png" id="6_2qcgb"]
+[ext_resource type="Texture2D" uid="uid://bk1n4d6lifynp" path="res://Assets/misc/transition.svg" id="7_8md2f"]
+[ext_resource type="Script" path="res://Assets/Transition.gd" id="8_lu5te"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_o0yiy")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(951, 559)
-scale = Vector2(1.18081, 1.18081)
-texture = ExtResource("2_x48pc")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 13.0
-offset_top = 357.0
-offset_right = 1911.0
-offset_bottom = 380.0
-text = "UI Designer"
-label_settings = SubResource("LabelSettings_gxgml")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="LibreModeButton" type="Button" parent="."]
-offset_left = 782.0
-offset_top = 424.0
-offset_right = 1207.0
-offset_bottom = 563.0
+offset_left = 837.0
+offset_top = 526.0
+offset_right = 1104.0
+offset_bottom = 641.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_7kfqm")
 text = "Commencer"
 
 [node name="QuitButton" type="Button" parent="."]
 offset_left = 860.0
-offset_top = 628.0
-offset_right = 1148.0
-offset_bottom = 740.0
+offset_top = 674.0
+offset_right = 1090.0
+offset_bottom = 753.0
+theme = ExtResource("3_7kfqm")
 text = "Quitter le jeu"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(960, 265)
+scale = Vector2(0.331838, 0.331839)
+texture = ExtResource("4_ii43l")
+
+[node name="Hills" type="Sprite2D" parent="."]
+modulate = Color(0.972549, 0.972549, 0.972549, 1)
+z_index = -1
+position = Vector2(960, 718)
+texture = ExtResource("4_t2ksp")
+
+[node name="Character" type="Sprite2D" parent="."]
+position = Vector2(328, 501)
+scale = Vector2(0.243442, 0.243442)
+texture = ExtResource("5_y3ac1")
+
+[node name="Fish" type="Sprite2D" parent="."]
+position = Vector2(1568, 663)
+scale = Vector2(0.264224, 0.264224)
+texture = ExtResource("6_2qcgb")
+
+[node name="AnimationTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="Transition" type="Sprite2D" parent="."]
+z_index = 1000
+position = Vector2(960, -1118)
+scale = Vector2(1.04633, 1.04633)
+texture = ExtResource("7_8md2f")
+script = ExtResource("8_lu5te")
 
 [connection signal="pressed" from="LibreModeButton" to="." method="_on_libre_mode_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]

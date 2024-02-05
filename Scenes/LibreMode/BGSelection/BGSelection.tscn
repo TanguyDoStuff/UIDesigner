@@ -1,31 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4poeq7tjtxak"]
+[gd_scene load_steps=11 format=3 uid="uid://b4poeq7tjtxak"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/BGSelection/BGSelection.gd" id="1_6x1h5"]
-[ext_resource type="Texture2D" uid="uid://rb11h3lsm4ya" path="res://Assets/paperbg.png" id="2_cj25m"]
 [ext_resource type="Texture2D" uid="uid://d2w5mh2id3hkn" path="res://Assets/LibreBG/kart.png" id="3_0hwf2"]
+[ext_resource type="Theme" uid="uid://d0iklti56tk3l" path="res://Assets/theme/borderButton.tres" id="3_8oinx"]
+[ext_resource type="Theme" uid="uid://cgvukp6032r6t" path="res://Assets/theme/theme.tres" id="3_50674"]
 [ext_resource type="Texture2D" uid="uid://dgddrij3kdfds" path="res://Assets/LibreBG/fp.png" id="4_8o87j"]
 [ext_resource type="Texture2D" uid="uid://dqjtpgiae27xj" path="res://Assets/LibreBG/topdown.png" id="5_8iu5o"]
 [ext_resource type="Texture2D" uid="uid://d50vifu3tuw6" path="res://Assets/LibreBG/tp.png" id="6_8rtnp"]
 [ext_resource type="Texture2D" uid="uid://b8lbcju11qdpi" path="res://Assets/LibreBG/Puzzle.png" id="7_f8hmj"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_avadd"]
-font_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://bk1n4d6lifynp" path="res://Assets/misc/transition.svg" id="9_8eb6p"]
+[ext_resource type="Script" path="res://Assets/Transition.gd" id="10_nn4tb"]
 
 [node name="BgSelection" type="Node2D"]
 script = ExtResource("1_6x1h5")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(951, 559)
-scale = Vector2(1.18081, 1.18081)
-texture = ExtResource("2_cj25m")
-
 [node name="Label" type="Label" parent="."]
-offset_left = 13.0
-offset_top = 59.0
-offset_right = 1911.0
-offset_bottom = 82.0
-text = "SELECTION DE GENRE DE JEU"
-label_settings = SubResource("LabelSettings_avadd")
+z_index = 1000
+offset_top = 19.0
+offset_right = 1924.0
+offset_bottom = 89.0
+theme = ExtResource("3_50674")
+text = "Sélectionne ton fond!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -34,6 +29,7 @@ offset_left = 36.0
 offset_top = 22.0
 offset_right = 243.0
 offset_bottom = 89.0
+theme = ExtResource("3_50674")
 text = "Retour"
 
 [node name="BGKart" type="Button" parent="."]
@@ -41,10 +37,11 @@ offset_left = 409.0
 offset_top = 142.0
 offset_right = 847.0
 offset_bottom = 388.0
+theme = ExtResource("3_8oinx")
 
 [node name="Sprite2D" type="Sprite2D" parent="BGKart"]
 position = Vector2(219, 123)
-scale = Vector2(0.227778, 0.227778)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_0hwf2")
 
 [node name="BGFP" type="Button" parent="."]
@@ -52,10 +49,11 @@ offset_left = 1078.0
 offset_top = 147.0
 offset_right = 1516.0
 offset_bottom = 393.0
+theme = ExtResource("3_8oinx")
 
 [node name="Sprite2D" type="Sprite2D" parent="BGFP"]
 position = Vector2(219, 123)
-scale = Vector2(0.227778, 0.227778)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_8o87j")
 
 [node name="BGTopdown" type="Button" parent="."]
@@ -63,10 +61,11 @@ offset_left = 399.0
 offset_top = 455.0
 offset_right = 837.0
 offset_bottom = 701.0
+theme = ExtResource("3_8oinx")
 
 [node name="Sprite2D" type="Sprite2D" parent="BGTopdown"]
 position = Vector2(219, 123)
-scale = Vector2(0.227778, 0.227778)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_8iu5o")
 
 [node name="BGTP" type="Button" parent="."]
@@ -74,10 +73,11 @@ offset_left = 1078.0
 offset_top = 451.0
 offset_right = 1516.0
 offset_bottom = 697.0
+theme = ExtResource("3_8oinx")
 
 [node name="Sprite2D" type="Sprite2D" parent="BGTP"]
 position = Vector2(219, 123)
-scale = Vector2(0.227778, 0.227778)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_8rtnp")
 
 [node name="BGPuzzle" type="Button" parent="."]
@@ -85,11 +85,18 @@ offset_left = 744.0
 offset_top = 777.0
 offset_right = 1182.0
 offset_bottom = 1023.0
+theme = ExtResource("3_8oinx")
 
 [node name="Sprite2D" type="Sprite2D" parent="BGPuzzle"]
 position = Vector2(219, 123)
-scale = Vector2(0.227778, 0.227778)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_f8hmj")
+
+[node name="Transition" type="Sprite2D" parent="."]
+position = Vector2(960, -1118)
+scale = Vector2(1.04633, 1.04633)
+texture = ExtResource("9_8eb6p")
+script = ExtResource("10_nn4tb")
 
 [connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
 [connection signal="pressed" from="BGKart" to="." method="_on_bg_kart_pressed"]

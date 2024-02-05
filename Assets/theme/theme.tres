@@ -1,0 +1,51 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cgvukp6032r6t"]
+
+[ext_resource type="FontFile" uid="uid://b4f6rsoxu0fnn" path="res://Assets/Font/Poppins-Regular.ttf" id="1_b5e5u"]
+[ext_resource type="Texture2D" uid="uid://bomd2leohm61r" path="res://Assets/theme/button.svg" id="2_g8m47"]
+[ext_resource type="FontFile" uid="uid://pwxkd2m420io" path="res://Assets/Font/Poppins-SemiBold.ttf" id="3_dhpx1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ls3k8"]
+texture = ExtResource("2_g8m47")
+modulate_color = Color(0.847059, 0.847059, 0.847059, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yi4e8"]
+texture = ExtResource("2_g8m47")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvy4r"]
+
+[resource]
+default_font = ExtResource("1_b5e5u")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.87451, 0.87451, 0.87451, 0.501961)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("1_b5e5u")
+Button/styles/disabled = SubResource("StyleBoxTexture_ls3k8")
+Button/styles/focus = SubResource("StyleBoxTexture_ls3k8")
+Button/styles/hover = SubResource("StyleBoxTexture_yi4e8")
+Button/styles/normal = SubResource("StyleBoxTexture_yi4e8")
+Button/styles/pressed = SubResource("StyleBoxTexture_ls3k8")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 15
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 49
+Label/fonts/font = ExtResource("3_dhpx1")
+Label/styles/normal = SubResource("StyleBoxEmpty_gvy4r")
