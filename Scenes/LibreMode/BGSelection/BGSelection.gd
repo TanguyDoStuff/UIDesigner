@@ -11,10 +11,10 @@ func _on_backbutton_pressed(): #Go Back
 
 
 func _on_bg_test_1_pressed():
-	Global.libreBackground = "res://Assets/LibreBG/Test1.png"
+	Global.libreBackground = "res://Assets/LibreBG/kart.png"
 	bgLoad()
 
 
 func _on_bg_test_2_pressed():
-	Global.libreBackground = "res://Assets/LibreBG/Test2.png"
+	Global.libreBackground = "res://Assets/LibreBG/fps.png"
 	bgLoad()

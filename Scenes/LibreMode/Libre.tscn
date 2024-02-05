@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/Libre.gd" id="1_8huxv"]
 [ext_resource type="Texture2D" uid="uid://rb11h3lsm4ya" path="res://Assets/paperbg.png" id="2_fh7ly"]
-[ext_resource type="Texture2D" uid="uid://3o6m7ejwa7yf" path="res://Assets/LibreBG/Test1.png" id="2_l8oe1"]
 [ext_resource type="Texture2D" uid="uid://ir5s86uy4g78" path="res://Assets/Icons/Inventory.png" id="3_3wwis"]
+[ext_resource type="Texture2D" uid="uid://d2w5mh2id3hkn" path="res://Assets/LibreBG/kart.png" id="3_npcw4"]
 [ext_resource type="PackedScene" uid="uid://dhffqja5y63o5" path="res://Scenes/LibreMode/Inventory/InventoryScreen.tscn" id="4_641me"]
 [ext_resource type="Texture2D" uid="uid://covdxoe568l4" path="res://Assets/Icons/Trash.png" id="4_n2rd3"]
 
@@ -32,9 +32,19 @@ position = Vector2(951, 559)
 scale = Vector2(1.18081, 1.18081)
 texture = ExtResource("2_fh7ly")
 
+[node name="Border" type="ColorRect" parent="."]
+process_mode = 4
+offset_left = 280.0
+offset_top = 46.0
+offset_right = 1640.0
+offset_bottom = 814.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
 [node name="BackgroundImage" type="Sprite2D" parent="."]
 position = Vector2(960, 430)
-texture = ExtResource("2_l8oe1")
+scale = Vector2(0.703704, 0.703704)
+texture = ExtResource("3_npcw4")
 
 [node name="Backbutton" type="Button" parent="."]
 offset_left = 36.0
@@ -42,6 +52,7 @@ offset_top = 22.0
 offset_right = 243.0
 offset_bottom = 89.0
 text = "Retour"
+metadata/_edit_use_anchors_ = true
 
 [node name="InventoryButton" type="Button" parent="."]
 z_index = 1
@@ -50,6 +61,7 @@ offset_top = 865.0
 offset_right = 1850.0
 offset_bottom = 1009.0
 theme = SubResource("Theme_dxboc")
+metadata/_edit_use_anchors_ = true
 
 [node name="Inventory Icon" type="Sprite2D" parent="InventoryButton"]
 position = Vector2(73, 72)
