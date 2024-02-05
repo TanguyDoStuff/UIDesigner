@@ -111,3 +111,28 @@ func _on_coincount_button_pressed():
 func _on_compass_button_pressed():
 	hideInventory()
 	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/compass.tscn"))
+
+
+func _on_portrait_1_button_pressed():
+	hideInventory()
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/portrait1.tscn"))
+
+
+func _on_portrait_2_button_pressed():
+	hideInventory()
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/portrait2.tscn"))
+
+
+func _on_puzzlenext_button_pressed():
+	hideInventory()
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/puzzlenext.tscn"))
+
+
+func _on_dialoguename_button_pressed():
+	hideInventory()
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/dialoguename.tscn"))
+
+
+func _on_dialoguesquare_button_pressed():
+	hideInventory()
+	get_parent().spawnElement(preload("res://Scenes/LibreMode/Element/dialoguesquare.tscn"))

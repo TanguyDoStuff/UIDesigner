@@ -1,14 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4poeq7tjtxak"]
+[gd_scene load_steps=9 format=3 uid="uid://b4poeq7tjtxak"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/BGSelection/BGSelection.gd" id="1_6x1h5"]
 [ext_resource type="Texture2D" uid="uid://rb11h3lsm4ya" path="res://Assets/paperbg.png" id="2_cj25m"]
 [ext_resource type="Texture2D" uid="uid://d2w5mh2id3hkn" path="res://Assets/LibreBG/kart.png" id="3_0hwf2"]
-[ext_resource type="Texture2D" uid="uid://dgddrij3kdfds" path="res://Assets/LibreBG/fps.png" id="4_8o87j"]
+[ext_resource type="Texture2D" uid="uid://dgddrij3kdfds" path="res://Assets/LibreBG/fp.png" id="4_8o87j"]
+[ext_resource type="Texture2D" uid="uid://dqjtpgiae27xj" path="res://Assets/LibreBG/topdown.png" id="5_8iu5o"]
+[ext_resource type="Texture2D" uid="uid://d50vifu3tuw6" path="res://Assets/LibreBG/tp.png" id="6_8rtnp"]
+[ext_resource type="Texture2D" uid="uid://b8lbcju11qdpi" path="res://Assets/LibreBG/Puzzle.png" id="7_f8hmj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_avadd"]
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_d52si"]
 font_color = Color(0, 0, 0, 1)
 
 [node name="BgSelection" type="Node2D"]
@@ -18,35 +18,6 @@ script = ExtResource("1_6x1h5")
 position = Vector2(951, 559)
 scale = Vector2(1.18081, 1.18081)
 texture = ExtResource("2_cj25m")
-
-[node name="Backbutton" type="Button" parent="."]
-offset_left = 36.0
-offset_top = 22.0
-offset_right = 243.0
-offset_bottom = 89.0
-text = "Retour"
-
-[node name="BGTest1" type="Button" parent="."]
-offset_left = 403.0
-offset_top = 142.0
-offset_right = 852.0
-offset_bottom = 393.0
-
-[node name="Sprite2D" type="Sprite2D" parent="BGTest1"]
-position = Vector2(226, 125)
-scale = Vector2(0.227778, 0.227778)
-texture = ExtResource("3_0hwf2")
-
-[node name="BGTest2" type="Button" parent="."]
-offset_left = 1078.0
-offset_top = 147.0
-offset_right = 1527.0
-offset_bottom = 398.0
-
-[node name="Sprite2D" type="Sprite2D" parent="BGTest2"]
-position = Vector2(226, 125)
-scale = Vector2(0.227778, 0.227778)
-texture = ExtResource("4_8o87j")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 13.0
@@ -58,18 +29,71 @@ label_settings = SubResource("LabelSettings_avadd")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 246.0
-offset_top = 551.0
-offset_right = 547.0
-offset_bottom = 678.0
-text = "A AJOUTER
-- Top down (Zelda 1, link to the past, ...)
-- Jeu de puzzle (Puyo Puyo, Tetris...)
-- TPS
-- Visual Novel"
-label_settings = SubResource("LabelSettings_d52si")
+[node name="Backbutton" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 243.0
+offset_bottom = 89.0
+text = "Retour"
+
+[node name="BGKart" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 142.0
+offset_right = 847.0
+offset_bottom = 388.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BGKart"]
+position = Vector2(219, 123)
+scale = Vector2(0.227778, 0.227778)
+texture = ExtResource("3_0hwf2")
+
+[node name="BGFP" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 147.0
+offset_right = 1516.0
+offset_bottom = 393.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BGFP"]
+position = Vector2(219, 123)
+scale = Vector2(0.227778, 0.227778)
+texture = ExtResource("4_8o87j")
+
+[node name="BGTopdown" type="Button" parent="."]
+offset_left = 399.0
+offset_top = 455.0
+offset_right = 837.0
+offset_bottom = 701.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BGTopdown"]
+position = Vector2(219, 123)
+scale = Vector2(0.227778, 0.227778)
+texture = ExtResource("5_8iu5o")
+
+[node name="BGTP" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 451.0
+offset_right = 1516.0
+offset_bottom = 697.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BGTP"]
+position = Vector2(219, 123)
+scale = Vector2(0.227778, 0.227778)
+texture = ExtResource("6_8rtnp")
+
+[node name="BGPuzzle" type="Button" parent="."]
+offset_left = 744.0
+offset_top = 777.0
+offset_right = 1182.0
+offset_bottom = 1023.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BGPuzzle"]
+position = Vector2(219, 123)
+scale = Vector2(0.227778, 0.227778)
+texture = ExtResource("7_f8hmj")
 
 [connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
-[connection signal="pressed" from="BGTest1" to="." method="_on_bg_test_1_pressed"]
-[connection signal="pressed" from="BGTest2" to="." method="_on_bg_test_2_pressed"]
+[connection signal="pressed" from="BGKart" to="." method="_on_bg_kart_pressed"]
+[connection signal="pressed" from="BGFP" to="." method="_on_bgfp_pressed"]
+[connection signal="pressed" from="BGTopdown" to="." method="_on_bg_topdown_pressed"]
+[connection signal="pressed" from="BGTP" to="." method="_on_bgtp_pressed"]
+[connection signal="pressed" from="BGPuzzle" to="." method="_on_bg_puzzle_pressed"]

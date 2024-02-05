@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://rnklewsj7gby"]
+[gd_scene load_steps=4 format=3 uid="uid://cte8x1mbsm0h2"]
 
-[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_r07ge"]
-[ext_resource type="Texture2D" uid="uid://dld04680gdtcv" path="res://Assets/LibreElement/coincount.png" id="2_0mwmo"]
+[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_frggr"]
+[ext_resource type="Texture2D" uid="uid://d35810voplx36" path="res://Assets/LibreElement/portrait1.png" id="2_bc881"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwq1y"]
-size = Vector2(190, 126)
+size = Vector2(124, 168)
 
 [node name="Test" type="Node2D"]
-script = ExtResource("1_r07ge")
+script = ExtResource("1_frggr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.405405, 0.405405)
-texture = ExtResource("2_0mwmo")
+texture = ExtResource("2_bc881")
 
 [node name="Area2D" type="Area2D" parent="."]
 

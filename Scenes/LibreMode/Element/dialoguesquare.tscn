@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://6imgp44ib8n4"]
+
+[ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_6fr4y"]
+[ext_resource type="Texture2D" uid="uid://bsf88i7di7dwi" path="res://Assets/LibreElement/dialoguesquare.png" id="2_hfp6q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xat85"]
+radius = 92.9999
+height = 558.0
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_6fr4y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.405405, 0.405405)
+texture = ExtResource("2_hfp6q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xat85")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

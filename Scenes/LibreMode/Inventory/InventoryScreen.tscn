@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dhffqja5y63o5"]
+[gd_scene load_steps=28 format=3 uid="uid://dhffqja5y63o5"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/Inventory/InventoryScreen.gd" id="1_4qnyd"]
 [ext_resource type="Texture2D" uid="uid://coyaoe1nlde6j" path="res://Assets/LibreElement/rank.png" id="3_tqdio"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://d3jh13nuhst73" path="res://Assets/LibreElement/lapcount.png" id="12_kyjny"]
 [ext_resource type="Texture2D" uid="uid://mj6imd3hrnqu" path="res://Assets/LibreElement/scorenumber.png" id="13_synnf"]
 [ext_resource type="Texture2D" uid="uid://343vffvgfnqf" path="res://Assets/LibreElement/scorestar.png" id="14_hku8m"]
+[ext_resource type="Texture2D" uid="uid://cgi0wmrl3krtv" path="res://Assets/LibreElement/dialoguename.png" id="14_uc87i"]
+[ext_resource type="Texture2D" uid="uid://bsf88i7di7dwi" path="res://Assets/LibreElement/dialoguesquare.png" id="15_3nay7"]
 [ext_resource type="Texture2D" uid="uid://dfqw3pd5834s8" path="res://Assets/LibreElement/staminabar.png" id="15_yg31r"]
 [ext_resource type="Texture2D" uid="uid://rfn7ufir4vq5" path="res://Assets/LibreElement/timer.png" id="16_swow7"]
 [ext_resource type="Texture2D" uid="uid://cor38xf31xu0q" path="res://Assets/LibreElement/abutton.png" id="17_7e853"]
@@ -22,6 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://cf4k1y71ux2sj" path="res://Assets/LibreElement/xbutton.png" id="20_cv53v"]
 [ext_resource type="Texture2D" uid="uid://dld04680gdtcv" path="res://Assets/LibreElement/coincount.png" id="21_i2o6e"]
 [ext_resource type="Texture2D" uid="uid://d2autfs1m0pgq" path="res://Assets/LibreElement/compass.png" id="22_pq0ln"]
+[ext_resource type="Texture2D" uid="uid://d35810voplx36" path="res://Assets/LibreElement/portrait1.png" id="23_unafj"]
+[ext_resource type="Texture2D" uid="uid://dor8feir0latn" path="res://Assets/LibreElement/portrait2.png" id="24_e4pue"]
+[ext_resource type="Texture2D" uid="uid://bj2nx4158g2fm" path="res://Assets/LibreElement/puzzlenext.png" id="25_o2n4i"]
 
 [node name="InventoryScreen" type="Node2D"]
 process_mode = 3
@@ -176,6 +181,30 @@ position = Vector2(72, 70)
 scale = Vector2(0.259257, 0.259257)
 texture = ExtResource("13_synnf")
 
+[node name="dialoguenameButton" type="Button" parent="."]
+offset_left = 191.0
+offset_top = 589.0
+offset_right = 331.0
+offset_bottom = 729.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="dialoguenameButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.194053, 0.194053)
+texture = ExtResource("14_uc87i")
+
+[node name="dialoguesquareButton" type="Button" parent="."]
+offset_left = 191.0
+offset_top = 383.0
+offset_right = 331.0
+offset_bottom = 523.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="dialoguesquareButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.0982541, 0.0982541)
+texture = ExtResource("15_3nay7")
+
 [node name="scorestarButton" type="Button" parent="."]
 offset_left = 1253.0
 offset_top = 589.0
@@ -284,6 +313,42 @@ position = Vector2(72, 70)
 scale = Vector2(0.0691213, 0.0691212)
 texture = ExtResource("22_pq0ln")
 
+[node name="portrait1Button" type="Button" parent="."]
+offset_left = 1480.0
+offset_top = 592.0
+offset_right = 1620.0
+offset_bottom = 732.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="portrait1Button"]
+position = Vector2(72, 70)
+scale = Vector2(0.285715, 0.285714)
+texture = ExtResource("23_unafj")
+
+[node name="portrait2Button" type="Button" parent="."]
+offset_left = 1670.0
+offset_top = 592.0
+offset_right = 1810.0
+offset_bottom = 732.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="portrait2Button"]
+position = Vector2(72, 70)
+scale = Vector2(0.285715, 0.285714)
+texture = ExtResource("24_e4pue")
+
+[node name="puzzlenextButton" type="Button" parent="."]
+offset_left = 1670.0
+offset_top = 387.0
+offset_right = 1810.0
+offset_bottom = 527.0
+scale = Vector2(1, 0.997149)
+
+[node name="Sprite2D" type="Sprite2D" parent="puzzlenextButton"]
+position = Vector2(72, 70)
+scale = Vector2(0.428571, 0.42857)
+texture = ExtResource("25_o2n4i")
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="healthbarButton" to="." method="_on_healthbar_button_pressed"]
 [connection signal="pressed" from="heartButton" to="." method="_on_heart_button_pressed"]
@@ -297,6 +362,8 @@ texture = ExtResource("22_pq0ln")
 [connection signal="pressed" from="mapkartButton" to="." method="_on_mapkart_button_pressed"]
 [connection signal="pressed" from="lapcountButton" to="." method="_on_lapcount_button_pressed"]
 [connection signal="pressed" from="scorenumberButton" to="." method="_on_scorenumber_button_pressed"]
+[connection signal="pressed" from="dialoguenameButton" to="." method="_on_dialoguename_button_pressed"]
+[connection signal="pressed" from="dialoguesquareButton" to="." method="_on_dialoguesquare_button_pressed"]
 [connection signal="pressed" from="scorestarButton" to="." method="_on_scorestar_button_pressed"]
 [connection signal="pressed" from="staminabarButton" to="." method="_on_staminabar_button_pressed"]
 [connection signal="pressed" from="timerButton" to="." method="_on_timer_button_pressed"]
@@ -306,3 +373,6 @@ texture = ExtResource("22_pq0ln")
 [connection signal="pressed" from="xButton" to="." method="_on_x_button_pressed"]
 [connection signal="pressed" from="coincountButton" to="." method="_on_coincount_button_pressed"]
 [connection signal="pressed" from="compassButton" to="." method="_on_compass_button_pressed"]
+[connection signal="pressed" from="portrait1Button" to="." method="_on_portrait_1_button_pressed"]
+[connection signal="pressed" from="portrait2Button" to="." method="_on_portrait_2_button_pressed"]
+[connection signal="pressed" from="puzzlenextButton" to="." method="_on_puzzlenext_button_pressed"]
