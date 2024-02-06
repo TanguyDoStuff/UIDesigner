@@ -61,7 +61,7 @@ texture = ExtResource("4_n2rd3")
 
 [node name="Transition" type="Sprite2D" parent="."]
 z_index = 1000
-position = Vector2(960, -1118)
+position = Vector2(960, 36)
 scale = Vector2(1.04633, 1.04633)
 texture = ExtResource("8_k7o8c")
 script = ExtResource("9_xwyvj")

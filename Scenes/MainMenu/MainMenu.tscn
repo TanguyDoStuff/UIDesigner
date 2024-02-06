@@ -58,7 +58,7 @@ autostart = true
 
 [node name="Transition" type="Sprite2D" parent="."]
 z_index = 1000
-position = Vector2(960, -1118)
+position = Vector2(960, 36)
 scale = Vector2(1.04633, 1.04633)
 texture = ExtResource("7_8md2f")
 script = ExtResource("8_lu5te")

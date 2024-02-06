@@ -15,7 +15,7 @@
 script = ExtResource("1_6x1h5")
 
 [node name="Label" type="Label" parent="."]
-z_index = 1000
+z_index = 1
 offset_top = 19.0
 offset_right = 1924.0
 offset_bottom = 89.0
@@ -93,7 +93,8 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_f8hmj")
 
 [node name="Transition" type="Sprite2D" parent="."]
-position = Vector2(960, -1118)
+z_index = 2
+position = Vector2(960, 36)
 scale = Vector2(1.04633, 1.04633)
 texture = ExtResource("9_8eb6p")
 script = ExtResource("10_nn4tb")

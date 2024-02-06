@@ -22,8 +22,9 @@ func _on_backbutton_pressed():
 	BUTTON_PRESSED = true
 
 func _on_inventory_button_pressed():
-	$InventoryScreen.visible = true
-	get_tree().paused = true
+	if not BUTTON_PRESSED:
+		$InventoryScreen.visible = true
+		get_tree().paused = true
 
 
 func _on_trash_area_mouse_entered():

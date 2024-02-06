@@ -33,4 +33,5 @@ func _on_libre_mode_button_pressed():
 
 
 func _on_quit_button_pressed():
-	get_tree().quit()
+	if not BUTTON_PRESSED:
+		get_tree().quit()
