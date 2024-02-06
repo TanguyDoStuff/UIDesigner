@@ -23,6 +23,7 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="BackgroundImage" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(960, 430)
 scale = Vector2(0.703704, 0.703704)
 texture = ExtResource("3_npcw4")

@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://Scenes/LibreMode/Element/DragNDrop.gd" id="1_alvwi"]
 [ext_resource type="Texture2D" uid="uid://dfqw3pd5834s8" path="res://Assets/LibreElement/staminabar.png" id="2_lx2wq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyk63"]
-size = Vector2(410, 70)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8xly1"]
+radius = 25.0
+height = 392.0
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_alvwi")
@@ -16,7 +17,8 @@ texture = ExtResource("2_lx2wq")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_lyk63")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8xly1")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

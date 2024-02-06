@@ -27,7 +27,7 @@ func _on_bg_kart_pressed():
 
 func _on_bgfp_pressed():
 	if not BUTTON_PRESSED:
-		Global.libreBackground = "res://Assets/LibreBG/fp.png"
+		Global.libreBackground = "res://Assets/LibreBG/fp.svg"
 		bgLoad()
 
 

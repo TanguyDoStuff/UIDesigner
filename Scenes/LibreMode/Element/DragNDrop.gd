@@ -39,7 +39,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	# ROTATION
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT:
 		if event.pressed:
-			rotation_degrees = rotation_degrees + 36
+			rotation_degrees = rotation_degrees + 30
 
 
 func _on_area_2d_mouse_exited():
