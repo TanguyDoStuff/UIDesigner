@@ -20,7 +20,7 @@ func _on_backbutton_pressed(): #Go Back
 
 func _on_bg_kart_pressed():
 	if not BUTTON_PRESSED:
-		Global.libreBackground = "res://Assets/LibreBG/kart.png"
+		Global.libreBackground = "res://Assets/LibreBG/kart.svg"
 		bgLoad()
 	
 
@@ -45,5 +45,5 @@ func _on_bgtp_pressed():
 
 func _on_bg_puzzle_pressed():
 	if not BUTTON_PRESSED:
-		Global.libreBackground = "res://Assets/LibreBG/Puzzle.png"
+		Global.libreBackground = "res://Assets/LibreBG/puzzle.svg"
 		bgLoad()
