@@ -9,6 +9,8 @@ func _ready():
 func _process(_delta):
 	if BUTTON_PRESSED:
 		$Transition.start()
+		
+	
 
 func spawnElement(currentElement):
 	var instance = currentElement.instantiate()

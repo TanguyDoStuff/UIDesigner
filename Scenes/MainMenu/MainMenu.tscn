@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bww7cnpwne6rl"]
+[gd_scene load_steps=11 format=3 uid="uid://bww7cnpwne6rl"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/MainMenu.gd" id="1_o0yiy"]
 [ext_resource type="Theme" uid="uid://cgvukp6032r6t" path="res://Assets/theme/theme.tres" id="3_7kfqm"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://p4isirdy1g8u" path="res://Assets/mainmenu/Fish.png" id="6_2qcgb"]
 [ext_resource type="Texture2D" uid="uid://bk1n4d6lifynp" path="res://Assets/misc/transition.svg" id="7_8md2f"]
 [ext_resource type="Script" path="res://Assets/Transition.gd" id="8_lu5te"]
+[ext_resource type="Script" path="res://Scenes/ParallaxBackground.gd" id="9_8kk4i"]
+[ext_resource type="Texture2D" uid="uid://tgvm14oyfj4i" path="res://Assets/gridbg.png" id="10_u0cxj"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_o0yiy")
@@ -62,6 +64,17 @@ position = Vector2(960, 36)
 scale = Vector2(1.04633, 1.04633)
 texture = ExtResource("7_8md2f")
 script = ExtResource("8_lu5te")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -128
+script = ExtResource("9_8kk4i")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2080, 1248)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1040, 624)
+texture = ExtResource("10_u0cxj")
 
 [connection signal="pressed" from="LibreModeButton" to="." method="_on_libre_mode_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

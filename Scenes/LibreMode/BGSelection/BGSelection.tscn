@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4poeq7tjtxak"]
+[gd_scene load_steps=13 format=3 uid="uid://b4poeq7tjtxak"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/BGSelection/BGSelection.gd" id="1_6x1h5"]
 [ext_resource type="Theme" uid="uid://d0iklti56tk3l" path="res://Assets/theme/borderButton.tres" id="3_8oinx"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://mmnxxwnyk4j4" path="res://Assets/LibreBG/puzzle.svg" id="8_p7tpf"]
 [ext_resource type="Texture2D" uid="uid://bk1n4d6lifynp" path="res://Assets/misc/transition.svg" id="9_8eb6p"]
 [ext_resource type="Script" path="res://Assets/Transition.gd" id="10_nn4tb"]
+[ext_resource type="Script" path="res://Scenes/ParallaxBackground.gd" id="11_8kygg"]
+[ext_resource type="Texture2D" uid="uid://tgvm14oyfj4i" path="res://Assets/gridbg.png" id="12_c6qby"]
 
 [node name="BgSelection" type="Node2D"]
 script = ExtResource("1_6x1h5")
@@ -93,12 +95,22 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_p7tpf")
 
 [node name="Transition" type="Sprite2D" parent="."]
-visible = false
 z_index = 2
 position = Vector2(960, 36)
 scale = Vector2(1.04633, 1.04633)
 texture = ExtResource("9_8eb6p")
 script = ExtResource("10_nn4tb")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -128
+script = ExtResource("11_8kygg")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2080, 1248)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1040, 624)
+texture = ExtResource("12_c6qby")
 
 [connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
 [connection signal="pressed" from="BGKart" to="." method="_on_bg_kart_pressed"]
