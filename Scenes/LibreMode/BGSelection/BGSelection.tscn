@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4poeq7tjtxak"]
+[gd_scene load_steps=12 format=3 uid="uid://b4poeq7tjtxak"]
 
 [ext_resource type="Script" path="res://Scenes/LibreMode/BGSelection/BGSelection.gd" id="1_6x1h5"]
 [ext_resource type="Theme" uid="uid://d0iklti56tk3l" path="res://Assets/theme/borderButton.tres" id="3_8oinx"]
 [ext_resource type="Theme" uid="uid://cgvukp6032r6t" path="res://Assets/theme/theme.tres" id="3_50674"]
-[ext_resource type="Texture2D" uid="uid://bd1hs7jb2iavb" path="res://Assets/LibreBG/kart.svg" id="4_plt2p"]
-[ext_resource type="Texture2D" uid="uid://dqjtpgiae27xj" path="res://Assets/LibreBG/topdown.png" id="5_8iu5o"]
+[ext_resource type="Texture2D" uid="uid://daavng7npvw1c" path="res://Assets/LibreBG/kart.svg" id="4_plt2p"]
 [ext_resource type="Texture2D" uid="uid://dq8yr4q1aunc0" path="res://Assets/LibreBG/fp.svg" id="5_yxxba"]
-[ext_resource type="Texture2D" uid="uid://d50vifu3tuw6" path="res://Assets/LibreBG/tp.png" id="6_8rtnp"]
+[ext_resource type="Texture2D" uid="uid://buefehvv7ay2x" path="res://Assets/LibreBG/tp.svg" id="6_g2r14"]
 [ext_resource type="Texture2D" uid="uid://mmnxxwnyk4j4" path="res://Assets/LibreBG/puzzle.svg" id="8_p7tpf"]
 [ext_resource type="Texture2D" uid="uid://bk1n4d6lifynp" path="res://Assets/misc/transition.svg" id="9_8eb6p"]
 [ext_resource type="Script" path="res://Assets/Transition.gd" id="10_nn4tb"]
@@ -58,18 +57,6 @@ position = Vector2(219, 123)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_yxxba")
 
-[node name="BGTopdown" type="Button" parent="."]
-offset_left = 399.0
-offset_top = 455.0
-offset_right = 837.0
-offset_bottom = 701.0
-theme = ExtResource("3_8oinx")
-
-[node name="Sprite2D" type="Sprite2D" parent="BGTopdown"]
-position = Vector2(219, 123)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_8iu5o")
-
 [node name="BGTP" type="Button" parent="."]
 offset_left = 1078.0
 offset_top = 451.0
@@ -80,13 +67,13 @@ theme = ExtResource("3_8oinx")
 [node name="Sprite2D" type="Sprite2D" parent="BGTP"]
 position = Vector2(219, 123)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("6_8rtnp")
+texture = ExtResource("6_g2r14")
 
 [node name="BGPuzzle" type="Button" parent="."]
-offset_left = 744.0
-offset_top = 777.0
-offset_right = 1182.0
-offset_bottom = 1023.0
+offset_left = 412.0
+offset_top = 449.0
+offset_right = 850.0
+offset_bottom = 695.0
 theme = ExtResource("3_8oinx")
 
 [node name="Sprite2D" type="Sprite2D" parent="BGPuzzle"]
@@ -95,6 +82,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_p7tpf")
 
 [node name="Transition" type="Sprite2D" parent="."]
+visible = false
 z_index = 2
 position = Vector2(960, 36)
 scale = Vector2(1.04633, 1.04633)
@@ -109,12 +97,12 @@ script = ExtResource("11_8kygg")
 motion_mirroring = Vector2(2080, 1248)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
 position = Vector2(1040, 624)
 texture = ExtResource("12_c6qby")
 
 [connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
 [connection signal="pressed" from="BGKart" to="." method="_on_bg_kart_pressed"]
 [connection signal="pressed" from="BGFP" to="." method="_on_bgfp_pressed"]
-[connection signal="pressed" from="BGTopdown" to="." method="_on_bg_topdown_pressed"]
 [connection signal="pressed" from="BGTP" to="." method="_on_bgtp_pressed"]
 [connection signal="pressed" from="BGPuzzle" to="." method="_on_bg_puzzle_pressed"]

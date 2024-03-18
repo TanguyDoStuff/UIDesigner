@@ -31,15 +31,9 @@ func _on_bgfp_pressed():
 		bgLoad()
 
 
-func _on_bg_topdown_pressed():
-	if not BUTTON_PRESSED:
-		Global.libreBackground = "res://Assets/LibreBG/topdown.png"
-		bgLoad()
-
-
 func _on_bgtp_pressed():
 	if not BUTTON_PRESSED:
-		Global.libreBackground = "res://Assets/LibreBG/tp.png"
+		Global.libreBackground = "res://Assets/LibreBG/tp.svg"
 		bgLoad()
 
 
