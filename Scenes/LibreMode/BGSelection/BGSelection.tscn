@@ -82,7 +82,6 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_p7tpf")
 
 [node name="Transition" type="Sprite2D" parent="."]
-visible = false
 z_index = 2
 position = Vector2(960, 36)
 scale = Vector2(1.04633, 1.04633)
